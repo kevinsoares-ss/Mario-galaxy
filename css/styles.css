@@ -1,0 +1,33 @@
+.hero-video.mario {
+  width: 180px;
+  max-width: 180px;
+}
+
+.hero-video.yoshi {
+  width: 140px;
+  max-width: 140px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6875rem 2rem;
+  border: none;
+  border-radius: 9999px;
+  background: var(--cosmic-purple);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+.btn-primary::before {
+  content: "▶";
+  flex-shrink: 0;
+  line-height: 1;
+  font-size: 0.85em;
+}
