@@ -153,7 +153,7 @@ function initFloatingNav() {
     .to('.hero__mario', {opacity: '0', ease:'none', duration: 1}, 0.5)
 
     .to('.hero__yoshi', {y: '100vh', ease:'none', duration: 2}, 0)
-    .to('.hero__yoshi', {opacity: '0', ease:'none', duration: 0.5}, 0.5)
+    .to('.hero__yoshi', {opacity: '0', ease:'none', duration: 1}, 0.5)
 
     .to('.hero__content-layer', {y: '100vh', ease:'none', duration: 0.9}, 0.9)
     .to('.hero__content-layer', {opacity: '0', ease:'none', duration: 0.5}, 0.5)
