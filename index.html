@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Mario Galaxy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="starfield" aria-hidden="true" role="presentation"></canvas>
+    <nav
+      id="floating-nav"
+      class="floating-nav"
+      aria-label="Primary sections"
+      aria-hidden="true"
+    >
+      <div class="floating-nav__inner">
+        <a class="floating-nav__brand" href="#hero">Galaxy</a>
+        <ul class="floating-nav__links">
+          <li><a href="#about">Overview</a></li>
+          <li><a href="#trailers">Trailers</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="hero" class="hero" aria-label="Hero">
+      <div class="hero__media-layer" aria-hidden="true">
+        <video class="hero__mario" autoplay muted loop playsinline>
+          <source src="assets/videos/mario-clip-alpha.webm" type="video/webm" />
+          <source src="assets/videos/mario-clip-min.mp4" type="video/mp4" />
+        </video>
+        <video class="hero__yoshi" autoplay muted loop playsinline>
+          <source
+            src="assets/videos/yoshi-video-alpha.webm"
+            type="video/webm"
+          />
+          <source src="assets/videos/yoshi-video-min.mp4" type="video/mp4" />
+        </video>
+        <video class="hero__planet" autoplay muted loop playsinline>
+          <source src="assets/videos/planet-3d-alpha.webm" type="video/webm" />
+          <source src="assets/videos/planet-3d-min.mp4" type="video/mp4" />
+        </video>
+        <img
+          class="hero__star hero__star--left"
+          src="assets/images/estrela-min.webp"
+          alt=""
+          width="140"
+          height="140"
+          decoding="async"
+          fetchpriority="low"
+        />
+        <img
+          class="hero__star hero__star--right"
+          src="assets/images/estrela-min.webp"
+          alt=""
+          width="140"
+          height="140"
+          decoding="async"
+          fetchpriority="low"
+        />
+        <img
+          class="hero__star hero__star--center"
+          src="assets/images/estrela-min.webp"
+          alt=""
+          width="140"
+          height="140"
+          decoding="async"
+          fetchpriority="low"
+        />
+      </div>
+
+      <div class="hero__content-layer">
+        <div class="hero__badge">NOS CINEMAS AGORA</div>
+        <h1 class="hero__title">
+          <span class="hero__title-line1">Super Mario</span>
+          <span class="hero__title-line2">Galaxy: O Filme</span>
+        </h1>
+        <p class="hero__subtitle">UMA AVENTURA ÉPICA PELO COSMOS</p>
+        <button type="button" class="hero__cta">
+          Assistir Trailer
+          <span class="hero__cta-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="hero__scroll-indicator">
+        <span class="hero__scroll-text">ROLE PARA EXPLORAR</span>
+      </div>
+    </section>
+    <section
+      id="marquee-personagens"
+      class="marquee-personagens"
+      aria-label="Destaques: Super Mario Galaxy, Nos Cinemas, Uma aventura pelo cosmos e personagens"
+    >
+      <div class="marquee-personagens__mask" aria-hidden="true">
+        <div class="marquee-personagens__track">
+          <div class="marquee-personagens__sequence">
+            <span class="marquee-personagens__text">Super Mario Galaxy</span>
+            <span class="marquee-personagens__sep" aria-hidden="true">/</span>
+            <span class="marquee-personagens__text">Nos Cinemas</span>
+            <span class="marquee-personagens__sep" aria-hidden="true">/</span>
+            <span class="marquee-personagens__text"
+              >Uma Aventura pelo Cosmos</span
+            >
+            <span class="marquee-personagens__sep" aria-hidden="true">/</span>
+            <span class="marquee-personagens__text">Mario</span>
+            <span class="marquee-personagens__sep" aria-hidden="true">/</span>
+            <span class="marquee-personagens__text">Luigi</span>
+            <span class="marquee-personagens__sep" aria-hidden="true">/</span>
+            <span class="marquee-personagens__text">Rosalina</span>
+            <span class="marquee-personagens__sep" aria-hidden="true">/</span>
+            <span class="marquee-personagens__text">P</span>
+          </div>
+          <div class="marquee-personagens__sequence">
+            <span class="marquee-personagens__text">Super Mario Galaxy</span>
+            <span class="marquee-personagens__sep" aria-hidden="true">/</span>
+            <span class="marquee-personagens__text">Nos Cinemas</span>
+            <span class="marquee-personagens__sep" aria-hidden="true">/</span>
+            <span class="marquee-personagens__text"
+              >Uma Aventura pelo Cosmos</span
+            >
+            <span class="marquee-personagens__sep" aria-hidden="true">/</span>
+            <span class="marquee-personagens__text">Mario</span>
+            <span class="marquee-personagens__sep" aria-hidden="true">/</span>
+            <span class="marquee-personagens__text">Luigi</span>
+            <span class="marquee-personagens__sep" aria-hidden="true">/</span>
+            <span class="marquee-personagens__text">Rosalina</span>
+            <span class="marquee-personagens__sep" aria-hidden="true">/</span>
+            <span class="marquee-personagens__text">P</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="personagens"
+      class="section-personagens"
+      tabindex="-1"
+      aria-labelledby="personagens-heading"
+    >
+      <div class="section-personagens__container">
+        <div class="section-personagens__intro">
+          <p class="section-personagens__eyebrow">Personagens</p>
+          <h2 id="personagens-heading">Uma galáxia de personagens</h2>
+          <p class="section-personagens__description">
+            Heróis e ícones ganham sua órbita própria, espalhados no espaço como
+            corpos celestes. A composição evita cards lado a lado e não usa
+            grid, reforçando o efeito de uma constelação viva.
+          </p>
+        </div>
+
+        <div class="section-personagens__field" aria-hidden="true">
+          <div id="personagens-particles" class="section-personagens__particles" aria-hidden="true"></div>
+          <div class="personagem personagem--mario">
+            <img
+              src="assets/images/mario-original.webp"
+              alt=""
+              aria-hidden="true"
+              width="420"
+              height="420"
+              decoding="async"
+              fetchpriority="low"
+            />
+         
+          </div>
+          <div class="personagem personagem--luigi">
+            <img
+              src="assets/images/luigi.webp"
+              alt=""
+              aria-hidden="true"
+              width="400"
+              height="400"
+              decoding="async"
+              fetchpriority="low"
+            />
+        
+          </div>
+          <div class="personagem personagem--peach">
+            <img
+              src="assets/images/peach.webp"
+              alt=""
+              aria-hidden="true"
+              width="380"
+              height="380"
+              decoding="async"
+              fetchpriority="low"
+            />
+        
+          </div>
+          <div class="personagem personagem--rosalina">
+            <img
+              src="assets/images/rosalina.webp"
+              alt=""
+              aria-hidden="true"
+              width="380"
+              height="380"
+              decoding="async"
+              fetchpriority="low"
+            />
+      
+          </div>
+          <div class="personagem personagem--yoshi">
+            <img
+              src="assets/images/yoshi-perso.webp"
+              alt=""
+              aria-hidden="true"
+              width="360"
+              height="360"
+              decoding="async"
+              fetchpriority="low"
+            />
+         
+          </div>
+          <div class="personagem personagem--bowserjr">
+            <img
+              src="assets/images/bowser-jr.webp"
+              alt=""
+              aria-hidden="true"
+              width="360"
+              height="360"
+              decoding="async"
+              fetchpriority="low"
+              
+            />
+      
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="trailers"
+      class="trailers"
+      tabindex="-1"
+      aria-labelledby="trailers-heading"
+    >
+      <div class="trailers__bg-text" aria-hidden="true">TRAILERS</div>
+
+      <header class="trailers__header">
+        <span class="trailers__eyebrow">ASSISTA AGORA</span>
+        <h2 id="trailers-heading" class="trailers__title">Trailers oficiais</h2>
+        <p class="trailers__subtitle">CLIPES DA AVENTURA NO ESPAÇO</p>
+      </header>
+
+      <div class="trailers__carousel">
+        <article class="trailers__player-container">
+          <div class="trailers__video-wrapper">
+            <iframe
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HRyy_FdyieU?si=bWj4820OHTsmbUiV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            >
+            </iframe>
+          
+   
+              <div class="trailers__player-footer">
+                <button
+                  class="trailers__link-btn"
+                  aria-label="Copiar Link"
+                ></button>
+                <a href="[TRAILER_URL_1]" class="trailers__yt-btn"
+                  >Assistir no YouTube</a
+                >
+              </div>
+            </div>
+          </div>
+        </article>
+
+      
+      </div>
+    </section>
+
+    <section id="estreia" class="estreia-section" tabindex="-1">
+      <div class="estreia-content">
+        <header class="estreia-header">
+          <h2 class="text-hero">
+            Cada <span class="text-accent">estrela</span> guarda uma história.
+            A sua começa <span class="text-accent">agora.</span>
+          </h2>
+          <p class="text-brand">SUPER MARIO GALAXY: O FILME</p>
+        </header>
+
+        <div class="countdown-wrapper" aria-live="polite">
+          <span class="countdown-label">ESTREIA NOS CINEMAS EM</span>
+          <div class="countdown-container" data-target-date="2026-12-25T00:00:00">
+            <div class="countdown-item">
+              <span class="countdown-value" data-countdown="days">00</span>
+              <span class="countdown-unit">DIAS</span>
+            </div>
+            <span class="countdown-separator" aria-hidden="true">:</span>
+            <div class="countdown-item">
+              <span class="countdown-value" data-countdown="hours">00</span>
+              <span class="countdown-unit">HORAS</span>
+            </div>
+            <span class="countdown-separator" aria-hidden="true">:</span>
+            <div class="countdown-item">
+              <span class="countdown-value" data-countdown="minutes">00</span>
+              <span class="countdown-unit">MIN</span>
+            </div>
+            <span class="countdown-separator" aria-hidden="true">:</span>
+            <div class="countdown-item">
+              <span class="countdown-value" data-countdown="seconds">00</span>
+              <span class="countdown-unit">SEG</span>
+            </div>
+          </div>
+          <time class="estreia-date-literal">Dia 25 de Dezembro, 2026</time>
+        </div>
+      </div>
+
+      <span class="power-star power-star--one" aria-hidden="true"></span>
+      <span class="power-star power-star--two" aria-hidden="true"></span>
+      <span class="power-star power-star--three" aria-hidden="true"></span>
+      <span class="power-star power-star--four" aria-hidden="true"></span>
+      <span class="power-star power-star--five" aria-hidden="true"></span>
+      <span class="power-star power-star--six" aria-hidden="true"></span>
+    </section>
+
+    <main>
+      <footer
+        id="about"
+        class="site-footer"
+        tabindex="-1"
+        aria-labelledby="about-heading"
+      >
+        <div class="section__container">
+          <h2 id="about-heading">Sobre o projeto</h2>
+          <p>
+            Uma landing page conceitual inspirada na galáxia de Super Mario, com
+            foco em aventura espacial, impacto visual e narrativa cinematográfica.
+          </p>
+          <div class="footer-meta">
+            <span>Super Mario Galaxy: O Filme</span>
+            <span>Projeto conceitual de fã • 2026</span>
+          </div>
+        </div>
+      </footer>
+   
+
+    <script src="js/script.js"></script>
+ <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+
+
+  </body>
+</html>
